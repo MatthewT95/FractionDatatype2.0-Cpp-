@@ -30,7 +30,7 @@ public:
     void setSign(char);                // Sets the fraction's sign
 
     // Other
-    static Fraction getReciprocal(const Fraction fraction);
+    Fraction getReciprocal();
     std::string toString(bool showPositiveSign = false);
     double toNumber();
 
