@@ -31,7 +31,7 @@ public:
 
     // Other
     Fraction getReciprocal();
-    std::string toString(bool showPositiveSign = false);
+    std::string toString(bool);
     double toNumber();
 
     // Assignment operators
