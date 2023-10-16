@@ -32,3 +32,4 @@
 *.app
 
 old_reference/
+source/main.cpp
