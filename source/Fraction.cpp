@@ -31,7 +31,7 @@ Fraction::Fraction(int numerator, unsigned int denominator)
     }
     else
     {
-        std::invalid_argument("Fraction denominator can not be zero.");
+        throw std::invalid_argument("Fraction denominator can not be zero.");
     }
     simplifyFraction();
 }
