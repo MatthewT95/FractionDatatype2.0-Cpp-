@@ -10,7 +10,6 @@ private:
     static unsigned int GCD(unsigned int a, unsigned int b); // returns Greatest Common Denominator of two integers
     static unsigned int LCD(unsigned int a, unsigned int b); // returns Least Common Multiple of two integers
 
-    void simplifyFraction(); // Simplifies the fraction
 public:
     // Constructors
     Fraction();
@@ -33,6 +32,7 @@ public:
     Fraction getReciprocal();
     std::string toString(bool);
     double toNumber();
+    void simplifyFraction(); // Simplifies the fraction
 
     // Assignment operators
     friend Fraction operator+(const Fraction &lhs, const Fraction &rhs);
