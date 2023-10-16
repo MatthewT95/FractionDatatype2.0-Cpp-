@@ -145,6 +145,11 @@ std::string Fraction::toString(bool showPositiveSign = false)
     }
 }
 
+double Fraction::toNumber()
+{
+    return ((double)getNumerator() / (double)getDenominator()) * getSign();
+}
+
 unsigned int Fraction::GCD(unsigned int a, unsigned int b)
 {
     if (b == 0)
