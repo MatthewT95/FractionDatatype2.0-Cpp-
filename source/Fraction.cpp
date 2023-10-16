@@ -69,6 +69,8 @@ void Fraction::setSign(char sign)
     else
     {
         this->sign = 0;
+        this->numerator = 0;
+        this->denominator = 1;
     }
 }
 
