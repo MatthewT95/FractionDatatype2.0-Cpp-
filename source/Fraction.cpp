@@ -311,3 +311,27 @@ Fraction &Fraction::operator=(const Fraction &src)
     sign = src.sign;
     return *this;
 }
+
+Fraction &Fraction::operator+=(const Fraction &src)
+{
+    *this = *this + src;
+    return *this;
+}
+
+Fraction &Fraction::operator-=(const Fraction &src)
+{
+    *this = *this - src;
+    return *this;
+}
+
+Fraction &Fraction::operator*=(const Fraction &src)
+{
+    *this = *this * src;
+    return *this;
+}
+
+Fraction &Fraction::operator/=(const Fraction &src)
+{
+    *this = *this / src;
+    return *this;
+}
