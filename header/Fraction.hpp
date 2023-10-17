@@ -17,12 +17,12 @@ public:
     Fraction(const Fraction &);
 
     // Getters
-    unsigned int getNumerator();   // Returns the fraction numerator
-    unsigned int getDenominator(); // Returns the fraction denominator
-    char getSign();                // Returns a number representing the sign of the fraction
-    bool isPositive();             // Returns true if fraction is greater then zero
-    bool isNegative();             // Returns true if fraction is less then zero
-    bool isZero();                 // Returns true if fraction is zero
+    unsigned int getNumerator() const;   // Returns the fraction numerator
+    unsigned int getDenominator() const; // Returns the fraction denominator
+    char getSign() const;                // Returns a number representing the sign of the fraction
+    bool isPositive() const;             // Returns true if fraction is greater then zero
+    bool isNegative() const;             // Returns true if fraction is less then zero
+    bool isZero() const;                 // Returns true if fraction is zero
 
     // Setters
     void setNumerator(unsigned int);   // Sets the fraction's numerator
@@ -30,9 +30,9 @@ public:
     void setSign(char);                // Sets the fraction's sign
 
     // Other
-    Fraction getReciprocal();
-    std::string toString(bool);
-    double toNumber();
+    Fraction getReciprocal() const;
+    std::string toString(bool) const;
+    double toNumber() const;
     void simplifyFraction(); // Simplifies the fraction
 
     friend Fraction operator-(const Fraction &);
