@@ -81,37 +81,37 @@ void Fraction::setSign(char sign)
     }
 }
 
-unsigned int Fraction::getNumerator()
+unsigned int Fraction::getNumerator() const
 {
     return this->numerator;
 }
 
-unsigned int Fraction::getDenominator()
+unsigned int Fraction::getDenominator() const
 {
     return this->denominator;
 }
 
-char Fraction::getSign()
+char Fraction::getSign() const
 {
     return this->sign;
 }
 
-bool Fraction::isPositive()
+bool Fraction::isPositive() const
 {
     return sign > 0;
 }
 
-bool Fraction::isNegative()
+bool Fraction::isNegative() const
 {
     return sign < 0;
 }
 
-bool Fraction::isZero()
+bool Fraction::isZero() const
 {
     return sign == 0;
 }
 
-Fraction Fraction::getReciprocal()
+Fraction Fraction::getReciprocal() const
 {
     Fraction reciprocal;
     if (this->numerator != 0)
@@ -127,7 +127,7 @@ Fraction Fraction::getReciprocal()
     return reciprocal;
 }
 
-std::string Fraction::toString(bool showPositiveSign = false)
+std::string Fraction::toString(bool showPositiveSign = false) const
 {
     // Checks if fraction is positive
     if (isPositive())
@@ -153,7 +153,7 @@ std::string Fraction::toString(bool showPositiveSign = false)
     }
 }
 
-double Fraction::toNumber()
+double Fraction::toNumber() const
 {
     return ((double)getNumerator() / (double)getDenominator()) * getSign();
 }
