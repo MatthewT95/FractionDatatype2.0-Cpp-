@@ -36,6 +36,24 @@ Fraction::Fraction(int numerator, unsigned int denominator)
     }
 }
 
+Fraction::Fraction(const int value)
+{
+    this->numerator = abs(value);
+    this->denominator = 1;
+    if (value > 0)
+    {
+        this->sign = 1;
+    }
+    else if (value < 0)
+    {
+        this->sign = -1;
+    }
+    else
+    {
+        this->sign = 0;
+    }
+}
+
 Fraction::Fraction(const Fraction &t)
 {
     this->numerator = t.numerator;
