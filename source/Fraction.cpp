@@ -271,6 +271,27 @@ Fraction operator-(const Fraction &lhs, const Fraction &rhs)
     return lhs + (-rhs);
 }
 
+Fraction operator*(const Fraction &lhs, const Fraction &rhs)
+{
+    // Check if either lhs or rhs has a value of zero and return zero fraction
+    if (lhs.sign == 0 || rhs.sign == 0)
+    {
+        return Fraction();
+    }
+    else
+    {
+        Fraction result;
+        // Mutiple numerators
+        result.numerator = lhs.numerator * rhs.numerator;
+        // Mutiple denominators
+        result.denominator = lhs.denominator * rhs.denominator;
+        // Mutiple signs
+        result.sign = lhs.sign * rhs.sign;
+
+        return result;
+    }
+}
+
 Fraction &Fraction::operator=(const Fraction &src)
 {
     numerator = src.numerator;
