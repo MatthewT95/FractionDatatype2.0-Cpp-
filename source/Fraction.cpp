@@ -127,7 +127,7 @@ Fraction Fraction::getReciprocal() const
     return reciprocal;
 }
 
-std::string Fraction::toString(bool showPositiveSign = false) const
+std::string Fraction::toString(bool showPositiveSign) const
 {
     // Checks if fraction is positive
     if (isPositive())

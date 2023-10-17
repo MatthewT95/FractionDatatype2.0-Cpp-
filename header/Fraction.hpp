@@ -31,7 +31,7 @@ public:
 
     // Other
     Fraction getReciprocal() const;
-    std::string toString(bool) const;
+    std::string toString(bool showPositiveSign = true) const;
     double toNumber() const;
     void simplifyFraction(); // Simplifies the fraction
 
