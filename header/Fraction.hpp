@@ -38,7 +38,7 @@ public:
     friend Fraction operator-(const Fraction &);
 
     // Assignment operators
-    friend Fraction operator+(Fraction &lhs, Fraction &rhs);
+    friend Fraction operator+(const Fraction &lhs, const Fraction &rhs);
     friend Fraction operator-(const Fraction &lhs, const Fraction &rhs);
     friend Fraction operator*(const Fraction &lhs, const Fraction &rhs);
     friend Fraction operator/(const Fraction &lhs, const Fraction &rhs);

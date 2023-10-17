@@ -197,7 +197,7 @@ Fraction operator-(const Fraction &src)
     return ans;
 }
 
-Fraction operator+(Fraction &lhs, Fraction &rhs)
+Fraction operator+(const Fraction &lhs, const Fraction &rhs)
 {
 
     // Checks if both fractions are zero and returns zero if true
