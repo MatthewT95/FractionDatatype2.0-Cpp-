@@ -42,7 +42,7 @@ public:
     friend Fraction operator/(const Fraction &lhs, const Fraction &rhs);
 
     // Assignment operators
-    void operator=(const Fraction &src);
+    Fraction &operator=(const Fraction &src);
     void operator+=(const Fraction &src);
     void operator-=(const Fraction &src);
     void operator*=(const Fraction &src);
