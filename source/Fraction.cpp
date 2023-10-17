@@ -274,7 +274,7 @@ Fraction operator-(const Fraction &lhs, const Fraction &rhs)
 Fraction operator*(const Fraction &lhs, const Fraction &rhs)
 {
     // Check if either lhs or rhs has a value of zero and return zero fraction
-    if (lhs.sign == 0 || rhs.sign == 0)
+    if (lhs.isZero() || rhs.isZero())
     {
         return Fraction();
     }
@@ -290,6 +290,11 @@ Fraction operator*(const Fraction &lhs, const Fraction &rhs)
 
         return result;
     }
+}
+
+Fraction operator/(const Fraction &lhs, const Fraction &rhs)
+{
+    return lhs * rhs.getReciprocal();
 }
 
 Fraction &Fraction::operator=(const Fraction &src)
