@@ -246,3 +246,10 @@ Fraction operator+(Fraction &lhs, Fraction &rhs)
         return result;
     }
 }
+
+void Fraction::operator=(const Fraction &src)
+{
+    this->numerator = src.numerator;
+    this->denominator = src.denominator;
+    this->sign = src.sign;
+}
