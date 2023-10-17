@@ -294,7 +294,14 @@ Fraction operator*(const Fraction &lhs, const Fraction &rhs)
 
 Fraction operator/(const Fraction &lhs, const Fraction &rhs)
 {
-    return lhs * rhs.getReciprocal();
+    if (rhs.isZero())
+    {
+        throw std::logic_error("Can not divide by zero.")
+    }
+    else
+    {
+        return lhs * rhs.getReciprocal();
+    }
 }
 
 Fraction &Fraction::operator=(const Fraction &src)
