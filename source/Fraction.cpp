@@ -296,7 +296,7 @@ Fraction operator/(const Fraction &lhs, const Fraction &rhs)
 {
     if (rhs.isZero())
     {
-        throw std::logic_error("Can not divide by zero.")
+        throw std::logic_error("Can not divide by zero.");
     }
     else
     {
