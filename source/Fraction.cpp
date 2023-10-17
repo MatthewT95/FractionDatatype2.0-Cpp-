@@ -35,6 +35,13 @@ Fraction::Fraction(int numerator, unsigned int denominator)
     }
 }
 
+Fraction::Fraction(const Fraction &t)
+{
+    this->numerator = t.numerator;
+    this->denominator = t.denominator;
+    this->sign = t.sign;
+}
+
 void Fraction::setNumerator(unsigned int numerator)
 {
     this->numerator = numerator;
@@ -162,7 +169,7 @@ unsigned int Fraction::GCD(unsigned int a, unsigned int b)
     }
 }
 
-unsigned int Fraction::LCD(unsigned int a, unsigned int b)
+unsigned int Fraction::LCM(unsigned int a, unsigned int b)
 {
     return (a * b) / GCD(a, b);
 }
@@ -172,4 +179,70 @@ void Fraction::simplifyFraction()
     unsigned int commonFactor = GCD(this->numerator, this->denominator);
     this->numerator = this->numerator / commonFactor;
     this->denominator = this->denominator / commonFactor;
+}
+
+Fraction operator+(Fraction &lhs, Fraction &rhs)
+{
+
+    // Checks if both fractions are zero and returns zero if true
+    if (lhs.sign == 0 && rhs.sign == 0)
+    {
+        return Fraction(0, 1);
+    }
+    // Checks if lhs is zero and if true return rhs
+    else if (lhs.sign == 0)
+    {
+        return rhs;
+    }
+    // Checks if rhs is zero and if true return lhs
+    else if (rhs.sign == 0)
+    {
+        return lhs;
+    }
+    // Checks if both sides are not zero
+    else
+    {
+        Fraction result;
+        // Calculate new denominator
+        unsigned int commonDominator = Fraction::LCM(lhs.getDenominator(), rhs.getDenominator());
+        // Calculate the multiplier needed to convert both fractions to a common dominator
+        unsigned int lhsMultiplier = lhs.getDenominator() / commonDominator;
+        unsigned int rhsMultiplier = rhs.getDenominator() / commonDominator;
+        // convert lhs
+        lhs.numerator *= lhsMultiplier;
+        lhs.denominator *= lhsMultiplier;
+        // convert rhs
+        rhs.numerator *= rhsMultiplier;
+        rhs.denominator *= rhsMultiplier;
+
+        // Checks if signs match
+        if (lhs.sign == rhs.sign)
+        {
+            result.numerator = lhs.numerator + rhs.numerator;
+            result.denominator = commonDominator;
+            result.sign = lhs.sign;
+        }
+        else
+        {
+            // Calculates value of new numerator
+            int value = lhs.numerator * lhs.sign + rhs.numerator * rhs.sign;
+            result.numerator = abs(value); // sets numerator to absolute value of value
+            result.denominator = commonDominator;
+            // Updates sign according to sign of value
+            if (value > 0)
+            {
+                result.setSign(1);
+            }
+            else if (value < 0)
+            {
+                result.setSign(-1);
+            }
+            else
+            {
+                result.setSign(0);
+            }
+        }
+
+        return result;
+    }
 }
