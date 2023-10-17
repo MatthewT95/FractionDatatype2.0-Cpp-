@@ -182,6 +182,21 @@ void Fraction::simplifyFraction()
     this->denominator = this->denominator / commonFactor;
 }
 
+Fraction operator-(const Fraction &src)
+{
+    Fraction ans = src;
+    if (src.sign == 1)
+    {
+        ans.sign = -1;
+    }
+    else if (src.sign == -1)
+    {
+        ans.sign = 1;
+    }
+
+    return ans;
+}
+
 Fraction operator+(Fraction &lhs, Fraction &rhs)
 {
 
