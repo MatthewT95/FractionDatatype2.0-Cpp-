@@ -266,6 +266,11 @@ Fraction operator+(const Fraction &lhs, const Fraction &rhs)
     }
 }
 
+Fraction operator-(const Fraction &lhs, const Fraction &rhs)
+{
+    return lhs + (-rhs);
+}
+
 Fraction &Fraction::operator=(const Fraction &src)
 {
     numerator = src.numerator;
