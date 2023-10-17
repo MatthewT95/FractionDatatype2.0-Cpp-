@@ -43,10 +43,10 @@ public:
 
     // Assignment operators
     Fraction &operator=(const Fraction &src);
-    void operator+=(const Fraction &src);
-    void operator-=(const Fraction &src);
-    void operator*=(const Fraction &src);
-    void operator/=(const Fraction &src);
+    Fraction &operator+=(const Fraction &src);
+    Fraction &operator-=(const Fraction &src);
+    Fraction &operator*=(const Fraction &src);
+    Fraction &operator/=(const Fraction &src);
 
     // Relationship operators
     friend bool operator==(const Fraction a, const Fraction b);
