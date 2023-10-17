@@ -8,12 +8,13 @@ private:
     0 means fraction has a value of 0.*/
 
     static unsigned int GCD(unsigned int a, unsigned int b); // returns Greatest Common Denominator of two integers
-    static unsigned int LCD(unsigned int a, unsigned int b); // returns Least Common Multiple of two integers
+    static unsigned int LCM(unsigned int a, unsigned int b); // returns Least Common Multiple of two integers
 
 public:
     // Constructors
     Fraction();
     Fraction(int numerator, unsigned int denominator);
+    Fraction(const Fraction &);
 
     // Getters
     unsigned int getNumerator();   // Returns the fraction numerator
@@ -35,7 +36,7 @@ public:
     void simplifyFraction(); // Simplifies the fraction
 
     // Assignment operators
-    friend Fraction operator+(const Fraction &lhs, const Fraction &rhs);
+    friend Fraction operator+(Fraction &lhs, Fraction &rhs);
     friend Fraction operator-(const Fraction &lhs, const Fraction &rhs);
     friend Fraction operator*(const Fraction &lhs, const Fraction &rhs);
     friend Fraction operator/(const Fraction &lhs, const Fraction &rhs);
