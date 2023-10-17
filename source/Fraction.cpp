@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include <string>
+#include <iostream>
 #include "../header/Fraction.hpp"
 
 Fraction::Fraction()
@@ -202,30 +203,33 @@ Fraction operator+(Fraction &lhs, Fraction &rhs)
     // Checks if both sides are not zero
     else
     {
+        Fraction a = lhs;
+        Fraction b = rhs;
+
         Fraction result;
         // Calculate new denominator
-        unsigned int commonDominator = Fraction::LCM(lhs.getDenominator(), rhs.getDenominator());
+        unsigned int commonDominator = Fraction::LCM(a.denominator, b.denominator);
         // Calculate the multiplier needed to convert both fractions to a common dominator
-        unsigned int lhsMultiplier = lhs.getDenominator() / commonDominator;
-        unsigned int rhsMultiplier = rhs.getDenominator() / commonDominator;
+        unsigned int aMultiplier = commonDominator / a.denominator;
+        unsigned int bMultiplier = commonDominator / b.denominator;
         // convert lhs
-        lhs.numerator *= lhsMultiplier;
-        lhs.denominator *= lhsMultiplier;
+        a.numerator *= aMultiplier;
+        a.denominator *= aMultiplier;
         // convert rhs
-        rhs.numerator *= rhsMultiplier;
-        rhs.denominator *= rhsMultiplier;
+        b.numerator *= bMultiplier;
+        b.denominator *= bMultiplier;
 
         // Checks if signs match
-        if (lhs.sign == rhs.sign)
+        if (a.sign == b.sign)
         {
-            result.numerator = lhs.numerator + rhs.numerator;
+            result.numerator = a.numerator + b.numerator;
             result.denominator = commonDominator;
-            result.sign = lhs.sign;
+            result.sign = a.sign;
         }
         else
         {
             // Calculates value of new numerator
-            int value = lhs.numerator * lhs.sign + rhs.numerator * rhs.sign;
+            int value = (a.numerator * a.sign) + (b.numerator * b.sign);
             result.numerator = abs(value); // sets numerator to absolute value of value
             result.denominator = commonDominator;
             // Updates sign according to sign of value
@@ -247,9 +251,10 @@ Fraction operator+(Fraction &lhs, Fraction &rhs)
     }
 }
 
-void Fraction::operator=(const Fraction &src)
+Fraction &Fraction::operator=(const Fraction &src)
 {
-    this->numerator = src.numerator;
-    this->denominator = src.denominator;
-    this->sign = src.sign;
+    numerator = src.numerator;
+    denominator = src.denominator;
+    sign = src.sign;
+    return *this;
 }
