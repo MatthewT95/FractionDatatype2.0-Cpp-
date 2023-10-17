@@ -27,6 +27,7 @@ Use the following to include the header file.
 Fraction a; // Create a default fraction of 0/1
 Fraction b(1,3); // Create a positive fraction of 1/3
 Fraction c(-5,6); // Create a negative fraction -5/6
+Fraction (3); // Creates a fraction 3/1 from whole number
 ```
 
 ### Perform arithmetic operations on fractions
