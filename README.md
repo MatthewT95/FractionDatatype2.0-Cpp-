@@ -120,7 +120,7 @@ Fraction a;
 
 a.setNumerator(5)   // Sets fraction numerator to five
 a.setDenominator(6) // Sets fraction denominator to six
-a.sign(1)           // Sets the fraction sign to positive
+a.setSign(1)           // Sets the fraction sign to positive
 a.scale(2)          // Scales the fraction numerator and denominator by 2
 ```
 
