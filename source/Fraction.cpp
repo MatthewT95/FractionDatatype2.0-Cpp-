@@ -391,3 +391,24 @@ bool operator!=(const Fraction a, const Fraction b)
 {
     return !(a == b);
 }
+
+// Relational operators
+bool operator>(const Fraction a, const Fraction b)
+{
+    return ((int)(a.numerator * b.denominator) * a.sign) > ((int)(b.numerator * a.denominator) * b.sign);
+}
+
+bool operator<(const Fraction a, const Fraction b)
+{
+    return (b > a);
+}
+
+bool operator>=(const Fraction a, const Fraction b)
+{
+    return (a > b || a == b);
+}
+
+bool operator<=(const Fraction a, const Fraction b)
+{
+    return (a < b || a == b);
+}
