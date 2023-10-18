@@ -50,6 +50,7 @@ Fraction a(1,2);
 
 a = Fraction(1,3); // Assign a new value to fraction
 a += Fraction(1,3); // Increment value by fraction
+a -= Fraction(1,3); // Decrement value by fraction
 a *= Fraction(1,3); // Multiple by and self assign by fraction
 a /= Fraction(1,3); // Divide by and self assign by fraction
 ```
