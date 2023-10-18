@@ -110,6 +110,7 @@ void setNumerator(unsigned int);   // Sets the fraction's numerator
 void setDenominator(unsigned int); // Sets the fraction's denominator
 void setSign(char);                // Sets the fraction's sign
 void scale(unsigned int);          // Scales the numerator and denominator by factor
+void simplifyFraction();           // Simplifies the fraction
 ```
 
 #### Examples
@@ -160,5 +161,4 @@ There many other methods.
 Fraction getReciprocal() const;
 std::string toString(bool showPositiveSign = false) const;
 double toNumber() const;
-void simplifyFraction(); // Simplifies the fraction
 ```
