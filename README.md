@@ -32,11 +32,11 @@ The sign of the numerator decides the fraction sign. Only excepts denominators g
 We create the most simplified fraction equal to provided number.
 
 ```cpp
-Fraction a; // Create a default fraction of 0/1
-Fraction b(1,3); // Create a positive fraction of 1/3
+Fraction a;       // Create a default fraction of 0/1
+Fraction b(1,3);  // Create a positive fraction of 1/3
 Fraction c(-5,6); // Create a negative fraction -5/6
-Fraction (3); // Creates a fraction equal to whole number 3 which is 3/1
-Fraction(0.125) // Creates a fraction equal to decimal value 0.125. The fraction is 1/8 
+Fraction (3);     // Creates a fraction equal to whole number 3 which is 3/1
+Fraction(0.125)   // Creates a fraction equal to decimal value 0.125. The fraction is 1/8 
 ```
 
 ### Perform arithmetic operations on fractions
@@ -90,8 +90,8 @@ Supports '>','<','>=' and'<=' operations on fractions.
 Fraction a(1,2);
 Fraction b(-1,3);
 
-a > b; // Fraction a is greater then Fraction b
-a < b; // Fraction a is less then Fraction b
+a > b;  // Fraction a is greater then Fraction b
+a < b;  // Fraction a is less then Fraction b
 a >= b; // Fraction a is greater then or equal to Fraction b
 a <= b; // Fraction a is less then or equal to Fraction b
 ```
@@ -109,6 +109,7 @@ Setting sign to zero will set numerator to 0 and denominator to 1.
 void setNumerator(unsigned int);   // Sets the fraction's numerator
 void setDenominator(unsigned int); // Sets the fraction's denominator
 void setSign(char);                // Sets the fraction's sign
+void scale(unsigned int);          // Scales the numerator and denominator by factor
 ```
 
 #### Examples
@@ -116,9 +117,10 @@ void setSign(char);                // Sets the fraction's sign
 ```cpp
 Fraction a;
 
-a.setNumerator(5) // Sets fraction numerator to five
+a.setNumerator(5)   // Sets fraction numerator to five
 a.setDenominator(6) // Sets fraction denominator to six
-a.sign(1) // Sets the fraction sign to positive
+a.sign(1)           // Sets the fraction sign to positive
+a.scale(2)          // Scales the fraction numerator and denominator by 2
 ```
 
 ### Getters
