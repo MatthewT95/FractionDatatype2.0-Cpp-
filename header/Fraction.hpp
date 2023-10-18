@@ -16,6 +16,7 @@ public:
     Fraction(int numerator, unsigned int denominator);
     Fraction(const Fraction &);
     Fraction(const int);
+    Fraction(const double);
 
     // Getters
     unsigned int getNumerator() const;   // Returns the fraction numerator

@@ -54,6 +54,33 @@ Fraction::Fraction(const int value)
     }
 }
 
+Fraction::Fraction(const double value)
+{
+    unsigned int denominator = 1;
+    double numerator = value;
+    while ((double)(int)numerator != numerator)
+    {
+        numerator *= 10;
+        denominator *= 10;
+    }
+
+    this->numerator = numerator;
+    this->denominator = denominator;
+    if (value > 0)
+    {
+        this->sign = 1;
+    }
+    else if (value < 0)
+    {
+        this->sign = 1;
+    }
+    else
+    {
+        this->sign = 0;
+    }
+    this->simplifyFraction();
+}
+
 Fraction::Fraction(const Fraction &t)
 {
     this->numerator = t.numerator;
