@@ -172,6 +172,11 @@ Fraction Fraction::getReciprocal() const
     return reciprocal;
 }
 
+bool Fraction::isImproper() const
+{
+    return this->numerator > this->denominator;
+}
+
 std::string Fraction::toString(bool showPositiveSign) const
 {
     // Checks if fraction is positive

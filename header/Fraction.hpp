@@ -25,6 +25,7 @@ public:
     bool isPositive() const;             // Returns true if fraction is greater then zero
     bool isNegative() const;             // Returns true if fraction is less then zero
     bool isZero() const;                 // Returns true if fraction is zero
+    bool isImproper() const;             // Returns true if fraction is an improper fraction
 
     // Setters
     void setNumerator(unsigned int);   // Sets the fraction's numerator
