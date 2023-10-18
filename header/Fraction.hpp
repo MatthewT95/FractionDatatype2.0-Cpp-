@@ -32,6 +32,7 @@ public:
     void setDenominator(unsigned int); // Sets the fraction's denominator
     void setSign(char);                // Sets the fraction's sign
     void scale(unsigned int);          // Scales the numerator and denominator by factor
+    void simplifyFraction();           // Simplifies the fraction
 
     // Other
     Fraction getReciprocal() const;
@@ -42,7 +43,6 @@ public:
     2 : Use mixed number form
     */
     double toNumber() const;
-    void simplifyFraction(); // Simplifies the fraction
 
     friend Fraction operator-(const Fraction &);
 
