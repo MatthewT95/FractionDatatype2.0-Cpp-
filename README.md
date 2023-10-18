@@ -2,6 +2,8 @@
 
 ----
 
+Author: Matthew Taormina
+
 ## Summary
 
 This project contains the header and source file for a class designed to hold fractional values. Using this class you can store and modify fractions.
