@@ -31,6 +31,7 @@ public:
     void setNumerator(unsigned int);   // Sets the fraction's numerator
     void setDenominator(unsigned int); // Sets the fraction's denominator
     void setSign(char);                // Sets the fraction's sign
+    void scale(unsigned int);          // Scales the numerator and denominator by factor
 
     // Other
     Fraction getReciprocal() const;

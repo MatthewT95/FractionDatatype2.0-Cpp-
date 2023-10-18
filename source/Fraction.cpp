@@ -126,6 +126,19 @@ void Fraction::setSign(char sign)
     }
 }
 
+void Fraction::scale(unsigned int scale)
+{
+    if (scale > 0)
+    {
+        this->numerator *= scale;
+        this->denominator *= scale;
+    }
+    else
+    {
+        throw std::invalid_argument("Can not scale by zero.");
+    }
+}
+
 unsigned int Fraction::getNumerator() const
 {
     return this->numerator;
