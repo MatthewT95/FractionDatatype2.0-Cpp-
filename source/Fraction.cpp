@@ -353,3 +353,14 @@ Fraction &Fraction::operator/=(const Fraction &src)
     *this = *this / src;
     return *this;
 }
+
+// Equality operators
+bool operator==(const Fraction a, const Fraction b)
+{
+    return (a.numerator == b.numerator && a.denominator == b.denominator && a.sign == b.sign);
+}
+
+bool operator!=(const Fraction a, const Fraction b)
+{
+    return !(a == b);
+}
