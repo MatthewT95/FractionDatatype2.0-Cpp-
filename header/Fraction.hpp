@@ -34,6 +34,11 @@ public:
     // Other
     Fraction getReciprocal() const;
     std::string toString(bool showPositiveSign = false) const;
+    std::string toString2(unsigned char mode = 0) const; /*
+    Mode is a set of bit that represent different settings
+    1 : Show positive sign
+    2 : Use mixed number form
+    */
     double toNumber() const;
     void simplifyFraction(); // Simplifies the fraction
 
