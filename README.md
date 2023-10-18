@@ -82,6 +82,21 @@ a != a // Returns false
 a != b // Returns True
 ```
 
+### Perform relational operations on fractions
+
+Supports '>','<','>=' and'<=' operations on fractions.
+
+```cpp
+Fraction a(1,2);
+Fraction b(-1,3);
+
+a > b; // Fraction a is greater then Fraction b
+a < b; // Fraction a is less then Fraction b
+a >= b; // Fraction a is greater then or equal to Fraction b
+a <= b; // Fraction a is less then or equal to Fraction b
+```
+
+
 ### Setters
 
 Has setters for numerator, denominator and sign.
