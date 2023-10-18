@@ -118,10 +118,10 @@ void simplifyFraction();           // Simplifies the fraction
 ```cpp
 Fraction a;
 
-a.setNumerator(5)   // Sets fraction numerator to five
-a.setDenominator(6) // Sets fraction denominator to six
+a.setNumerator(5)      // Sets fraction numerator to five
+a.setDenominator(6)    // Sets fraction denominator to six
 a.setSign(1)           // Sets the fraction sign to positive
-a.scale(2)          // Scales the fraction numerator and denominator by 2
+a.scale(2)             // Scales the fraction numerator and denominator by 2
 ```
 
 ### Getters
