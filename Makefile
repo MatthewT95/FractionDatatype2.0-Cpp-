@@ -1,14 +1,20 @@
 executable_name = main.exe
 compiler_command = g++
-source_files = source/*
+source_files = $(wildcard source/*)
 
 all: compile run
 
 compile:
-	${compiler_command} ${source_files} -o ${executable_name}
+	@echo "Compiling program..."
+	@${compiler_command} ${source_files} -o ${executable_name}
+	@echo "Program compiled."
 
 run:
-	./${executable_name}
+	@echo "Running program..."
+	@./${executable_name}
+	@echo "program ended."
 
 clean:
-	rm *.exe
+	@echo "Removing binaries..."
+	@rm *.exe
+	@echo "Binaries removed successfully"
