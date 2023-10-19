@@ -78,7 +78,7 @@ Fraction::Fraction(const double value)
     {
         this->sign = 0;
     }
-    this->simplifyFraction();
+    this->reduce();
 }
 
 Fraction::Fraction(const Fraction &t)
