@@ -32,7 +32,7 @@ public:
     void setDenominator(unsigned int); // Sets the fraction's denominator
     void setSign(char);                // Sets the fraction's sign
     void scale(unsigned int);          // Scales the numerator and denominator by factor
-    void simplifyFraction();           // Simplifies the fraction
+    void reduce();                     // Reduces the fraction to lowest terms
 
     // Other
     Fraction getReciprocal() const;

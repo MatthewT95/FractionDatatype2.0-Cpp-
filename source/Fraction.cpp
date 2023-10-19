@@ -238,7 +238,7 @@ unsigned int Fraction::LCM(unsigned int a, unsigned int b)
     return (a * b) / GCD(a, b);
 }
 
-void Fraction::simplifyFraction()
+void Fraction::reduce()
 {
     unsigned int commonFactor = GCD(this->numerator, this->denominator);
     this->numerator = this->numerator / commonFactor;
