@@ -58,13 +58,17 @@ Fraction::Fraction(const double value)
 {
     unsigned int denominator = 1;
     double numerator = value;
+    // Makes numerator positive
+    if (numerator < 0)
+        numerator *= -1;
+
     while ((double)(int)numerator != numerator)
     {
         numerator *= 10;
         denominator *= 10;
     }
 
-    this->numerator = numerator;
+    this->numerator = (int)numerator;
     this->denominator = denominator;
     if (value > 0)
     {
@@ -72,7 +76,7 @@ Fraction::Fraction(const double value)
     }
     else if (value < 0)
     {
-        this->sign = 1;
+        this->sign = -1;
     }
     else
     {
