@@ -98,7 +98,6 @@ a >= b; // Fraction a is greater then or equal to Fraction b
 a <= b; // Fraction a is less then or equal to Fraction b
 ```
 
-
 ### Setters
 
 Has setters for numerator, denominator and sign.
