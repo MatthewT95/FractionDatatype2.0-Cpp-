@@ -6,12 +6,12 @@ all: compile run
 
 compile:
 	@echo "Compiling program..."
-	@${compiler_command} ${source_files} -o ${executable_name}
+	@${compiler_command} ${source_files} -o out/${executable_name}
 	@echo "Program compiled."
 
 run:
 	@echo "Running program..."
-	@./${executable_name}
+	@./out/${executable_name}
 	@echo "program ended."
 
 clean:
