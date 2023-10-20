@@ -16,5 +16,5 @@ run:
 
 clean:
 	@echo "Removing binaries..."
-	@rm *.exe
+	@rm out/*.exe
 	@echo "Binaries removed successfully"
